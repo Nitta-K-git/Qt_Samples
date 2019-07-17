@@ -2,7 +2,23 @@
 
 /*
  * Layoutにwidgetを追加して、windowにsetLayout
- * GroupBoxはsetLayoutできるウィジェット
+ * 
+ * Layoutはwidgetを持てる
+ * GroupBoxはLayoutを持てるwidget
+ * 
+ * MainLayout
+ *  |-widget(Label)
+ *  |-widget(Button)
+ *  |-widget(Others...)
+ *  |-widget(GroupBox)
+ *              |-widget(Others...)
+ *  |-widget(GroupBox)
+ *              |-widget(Others...)
+ *              |-widget(GroupBox)
+ *                          |-widget(Others...)
+ * 
+ * MainLayout-widgets
+ * GroupBox-Layout-widgets
 */
 
 int main(int argc, char *argv[])

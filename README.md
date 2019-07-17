@@ -49,7 +49,29 @@ DockWidgetの最小構成サンプル
 
 DockWidgetはdockオブジェクト作って、そこにひとつだけウィジェットをセットする
 
+### 009_widgets_sample
 
+Link:色々なwidgetのサンプル https://doc.qt.io/qt-5/widget-classes.html
 
+groupboxで区切って、mainwindowのcentralに設定
 
+テンプレートとして使う用
+
+### 010_widgets_pushbutton
+
+ボタンの基本的な使い方
+
+### 011_widgets_slider
+
+sliderの基本的な使い方
+
+- sliderが操作されたときに値をシグナルを受け取って表示
+- sliderから直接値を取得
+
+### 012_widgets_radiobutton
+
+radiobuttonの基本的な使い方
+
+- QButtonGroupでグループ化して排他Push
+- connectでの識別
 

@@ -50,3 +50,5 @@ CMakeLists.txt.user*
 *.qmake.*
 *.obj
 *.stash
+*.pdb
+*.ilk
