@@ -133,16 +133,16 @@ void QGLViewerWidget::paintGL() {
 
 void glutWireTeapot(double r){
 	glColor3f(1,0,0);
-//	glBegin(GL_TRIANGLES);
-	glBegin(GL_LINE_STRIP);
+	glBegin(GL_TRIANGLES);
+//	glBegin(GL_LINE_STRIP);
 	glVertex3f(-5,-5,0);
 	glVertex3f(-5,5,0);
 	glVertex3f(0,5,0);
 
-	glVertex3f(-5,-5,-5);
+	glVertex3f(-15,-5,-5);
 	glVertex3f(-5,5,-5);
 	glVertex3f(0,5,-5);
-	glVertex3f(-5,-5,5);
+	glVertex3f(5,-5,5);
 	glVertex3f(-5,5,5);
 	glVertex3f(0,5,5);
 	glEnd();
@@ -396,30 +396,30 @@ void QGLViewerWidget::setup_buffer_object(){
 	
 	int indices[] = {0, 1, 2, 0, 3, 2};
 	
-	glGenVertexArrays(1, &vao);
-	glGenBuffers(1, &vertex_vbo);
-	glGenBuffers(1, &color_vbo);
-	glGenBuffers(1, &ebo);
+//	glGenVertexArrays(1, &vao);
+//	glGenBuffers(1, &vertex_vbo);
+//	glGenBuffers(1, &color_vbo);
+//	glGenBuffers(1, &ebo);
 	
-	glBindVertexArray(vao);
+//	glBindVertexArray(vao);
 	
-	// Position attribute
-	glBindBuffer(GL_ARRAY_BUFFER, vertex_vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
+//	// Position attribute
+//	glBindBuffer(GL_ARRAY_BUFFER, vertex_vbo);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+//	glEnableVertexAttribArray(0);
+//	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (GLvoid*)0);
 	
-	// Color attribute
-	glBindBuffer(GL_ARRAY_BUFFER, color_vbo);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)0);
+//	// Color attribute
+//	glBindBuffer(GL_ARRAY_BUFFER, color_vbo);
+//	glBufferData(GL_ARRAY_BUFFER, sizeof(colors), colors, GL_STATIC_DRAW);
+//	glEnableVertexAttribArray(1);
+//	glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, 4 * sizeof(GLfloat), (GLvoid*)0);
 	
-	// Element Array Buffer
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+//	// Element Array Buffer
+//	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo);
+//	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 	
 	
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-	glBindVertexArray(0);
+//	glBindBuffer(GL_ARRAY_BUFFER, 0);
+//	glBindVertexArray(0);
 }
